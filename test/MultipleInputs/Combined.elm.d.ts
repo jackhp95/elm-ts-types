@@ -6,17 +6,17 @@ declare namespace Elm {
                 flags: string
             }): {
                 ports: {
-                    b_incoming: {
-                        send: (value: string) => void
-                    },
-                    b_outgoing: {
-                        subscribe: (f: (value: string) => Promise<void>) => void,
-                        unsubscribe: (f: (value: string) => Promise<void>) => void
-                    },
                     a_incoming: {
                         send: (value: string) => void
                     },
                     a_outgoing: {
+                        subscribe: (f: (value: string) => Promise<void>) => void,
+                        unsubscribe: (f: (value: string) => Promise<void>) => void
+                    },
+                    b_incoming: {
+                        send: (value: string) => void
+                    },
+                    b_outgoing: {
                         subscribe: (f: (value: string) => Promise<void>) => void,
                         unsubscribe: (f: (value: string) => Promise<void>) => void
                     }
@@ -29,17 +29,17 @@ declare namespace Elm {
                 flags: string
             }): {
                 ports: {
-                    b_incoming: {
-                        send: (value: string) => void
-                    },
-                    b_outgoing: {
-                        subscribe: (f: (value: string) => Promise<void>) => void,
-                        unsubscribe: (f: (value: string) => Promise<void>) => void
-                    },
                     a_incoming: {
                         send: (value: string) => void
                     },
                     a_outgoing: {
+                        subscribe: (f: (value: string) => Promise<void>) => void,
+                        unsubscribe: (f: (value: string) => Promise<void>) => void
+                    },
+                    b_incoming: {
+                        send: (value: string) => void
+                    },
+                    b_outgoing: {
                         subscribe: (f: (value: string) => Promise<void>) => void,
                         unsubscribe: (f: (value: string) => Promise<void>) => void
                     }

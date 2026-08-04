@@ -7,6 +7,7 @@ function generateTypeScriptHelper(name, exports, i) {
     return `${indent(i)}namespace ${name} {
 ${
     Object.entries(exports)
+        .sort(([keyA], [keyB]) => compare(keyA, keyB))
         .map(([key, value]) =>
             key === "init"
                 ? toDefinition(value(), i + 1)
@@ -56,6 +57,7 @@ ${indent(i)}}`;
 function toPortsType(ports, i) {
     const portsString =
         Object.entries(ports)
+            .sort(([nameA], [nameB]) => compare(nameA, nameB))
             .map(([name, port]) =>
                 port.$ === "incoming"
                     ? `${indent(i + 1)}${name}: {
@@ -80,8 +82,8 @@ function toType(type, i) {
                 ? `{ ${toKeyValue(entries[0], 0)} }`
                 : `{
 ${
-    Object.entries(type.value)
-        .sort(([keyA], [keyB]) => keyA.localeCompare(keyB))
+    entries
+        .sort(([keyA], [keyB]) => compare(keyA, keyB))
         .map(entry => toKeyValue(entry, i + 1))
         .join(",\n")
 }
@@ -103,6 +105,10 @@ ${indent(i)}}`;
 
 function toKeyValue([key, value], i) {
     return `${indent(i)}${JSON.stringify(key)}: ${toType(value, i)}`;
+}
+
+function compare(a, b) {
+    return a < b ? -1 : a > b ? 1 : 0;
 }
 
 function extract(code) {

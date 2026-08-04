@@ -6,9 +6,6 @@ declare namespace Elm {
             node: Node
         }): {
             ports: {
-                printFailed: {
-                    send: (value: string) => void
-                },
                 print: {
                     subscribe: (f: (value: {
                         "pages": Array<string>,
@@ -18,6 +15,9 @@ declare namespace Elm {
                         "pages": Array<string>,
                         "title": string
                     }) => Promise<void>) => void
+                },
+                printFailed: {
+                    send: (value: string) => void
                 }
             }
         };
