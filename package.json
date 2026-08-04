@@ -1,6 +1,6 @@
 {
     "name": "elm-ts-types",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Generate TypeScript typings for the JavaScript interface of Elm apps.",
     "keywords": [
         "Elm",
