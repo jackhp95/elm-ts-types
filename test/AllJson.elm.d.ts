@@ -70,60 +70,60 @@ declare namespace Elm {
                     subscribe: (f: (value: {
                         "arrayOfString": Array<string>,
                         "bool": boolean,
-                        "float": float,
+                        "float": number,
                         "int": number,
                         "json": unknown,
                         "listOfListsOfInt": Array<Array<number>>,
                         "listOfLongObject": Array<{
                             "first": number,
                             "last": boolean,
-                            "second": float
+                            "second": number
                         }>,
                         "listOfObject": Array<{ "nested": number }>,
                         "listOfString": Array<string>,
                         "longObject": {
                             "first": number,
                             "last": boolean,
-                            "second": float
+                            "second": number
                         },
                         "maybe": number | null,
                         "null": null,
                         "object": { "nested": string },
                         "string": string,
-                        "triple": [ float, {
+                        "triple": [ number, {
                             "first": number,
                             "last": boolean,
-                            "second": float
+                            "second": number
                         }, Array<number> ],
                         "tuple": [ boolean, number ]
                     }) => Promise<void>) => void,
                     unsubscribe: (f: (value: {
                         "arrayOfString": Array<string>,
                         "bool": boolean,
-                        "float": float,
+                        "float": number,
                         "int": number,
                         "json": unknown,
                         "listOfListsOfInt": Array<Array<number>>,
                         "listOfLongObject": Array<{
                             "first": number,
                             "last": boolean,
-                            "second": float
+                            "second": number
                         }>,
                         "listOfObject": Array<{ "nested": number }>,
                         "listOfString": Array<string>,
                         "longObject": {
                             "first": number,
                             "last": boolean,
-                            "second": float
+                            "second": number
                         },
                         "maybe": number | null,
                         "null": null,
                         "object": { "nested": string },
                         "string": string,
-                        "triple": [ float, {
+                        "triple": [ number, {
                             "first": number,
                             "last": boolean,
-                            "second": float
+                            "second": number
                         }, Array<number> ],
                         "tuple": [ boolean, number ]
                     }) => Promise<void>) => void

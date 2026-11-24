@@ -33,6 +33,10 @@
             "inputs": ["test/ESM.elm"],
             "output": "test/ESM.elm.js"
         },
+        "Float": {
+            "inputs": ["test/Float.elm"],
+            "output": "test/Float.elm.js"
+        },
         "Html_": {
             "inputs": ["test/Html_.elm"],
             "output": "test/Html_.elm.js"

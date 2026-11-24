@@ -178,7 +178,7 @@ function _Platform_setupOutgoingPort(name) {
 var $elm$json$Json$Encode$null = { $: "primitive", value: "null" };
 var $elm$json$Json$Encode$bool = () => ({ $: "primitive", value: "boolean" });
 var $elm$json$Json$Encode$int = () => ({ $: "primitive", value: "number" });
-var $elm$json$Json$Encode$float = () => ({ $: "primitive", value: "float" });
+var $elm$json$Json$Encode$float = () => ({ $: "primitive", value: "number" });
 var $elm$json$Json$Encode$string = () => ({ $: "primitive", value: "string" });
 var $elm$core$Basics$identity = () => ({ $: "primitive", value: "unknown" });
 

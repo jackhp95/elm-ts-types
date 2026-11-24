@@ -38,6 +38,6 @@ app.ports.incoming.send(payload);
 app.ports.outgoing.subscribe(async (p) => {
     p.triple[1].first.toFixed(2);
     p = payload;
-    // @ts-expect-error Type '{}' is missing the following properties from type '{ arrayOfString: string[]; bool: boolean; float: float; int: number; json: unknown; listOfListsOfInt: number[][]; listOfLongObject: { first: number; last: boolean; second: float; }[]; listOfObject: { nested: number; }[]; listOfString: string[]; ... 6 more ...; tuple: [...]; }': "arrayOfString", "bool", "float", "int", and 12 more.
+    // @ts-expect-error Type '{}' is missing the following properties from type '{ arrayOfString: string[]; bool: boolean; float: number; int: number; json: unknown; listOfListsOfInt: number[][]; listOfLongObject: { first: number; last: boolean; second: number; }[]; listOfObject: { nested: number; }[]; listOfString: string[]; ... 6 more ...; tuple: [...]; }': "arrayOfString", "bool", "float", "int", and 12 more.
     p = {};
 });
